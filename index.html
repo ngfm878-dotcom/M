@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مانتو کوک | فروشگاه آنلاین</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container nav">
+        <div class="logo">مانتو <span>کوک</span></div>
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+        <nav id="navMenu">
+            <a href="#home">خانه</a>
+            <a href="#products">محصولات</a>
+            <a href="#about">درباره ما</a>
+            <a href="#contact">تماس با ما</a>
+        </nav>
+
+        <button class="cart-btn" id="cartBtn">
+            🛒 سبد خرید
+            <span id="cartCount">0</span>
+        </button>
+    </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+    <div class="container hero-content">
+        <div>
+            <p class="subtitle">فروشگاه آنلاین مانتو</p>
+            <h1>استایل خاص خودت را با <span>مانتو کوک</span> بساز</h1>
+            <p>
+                مجموعه‌ای از مانتوهای شیک، مدرن و باکیفیت برای یک استایل زیبا.
+            </p>
+
+            <a href="#products" class="primary-btn">مشاهده محصولات</a>
+        </div>
+
+        <div class="hero-box">
+            <div class="hero-icon">👗</div>
+            <h3>مانتو کوک</h3>
+            <p>زیبایی در سادگی</p>
+        </div>
+    </div>
+</section>
+
+<section class="products-section" id="products">
+    <div class="container">
+        <div class="section-title">
+            <p>محصولات ما</p>
+            <h2>جدیدترین مانتوها</h2>
+        </div>
+
+        <div class="products" id="productsContainer"></div>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="container about-content">
+        <div>
+            <p class="section-label">درباره ما</p>
+            <h2>مانتو کوک، انتخابی برای استایل تو</h2>
+            <p>
+                ما در مانتو کوک تلاش می‌کنیم محصولات باکیفیت و زیبا را با
+                طراحی مدرن در اختیار شما قرار دهیم.
+            </p>
+        </div>
+
+        <div class="about-card">
+            <div>✨</div>
+            <h3>کیفیت و زیبایی</h3>
+            <p>محصولاتی با طراحی خاص و کیفیت مناسب.</p>
+        </div>
+    </div>
+</section>
+
+<section class="reviews">
+    <div class="container">
+        <div class="section-title">
+            <p>نظرات مشتریان</p>
+            <h2>مشتریان درباره ما چه می‌گویند؟</h2>
+        </div>
+
+        <div class="review-grid">
+            <div class="review">
+                <div class="stars">★★★★★</div>
+                <p>«طراحی محصولات خیلی زیباست و من از خریدم راضی بودم.»</p>
+                <strong>سارا</strong>
+            </div>
+
+            <div class="review">
+                <div class="stars">★★★★★</div>
+                <p>«سایت خیلی راحت بود و ثبت خرید هم سریع انجام شد.»</p>
+                <strong>مریم</strong>
+            </div>
+
+            <div class="review">
+                <div class="stars">★★★★★</div>
+                <p>«مدل‌های متنوع و جذابی داشت.»</p>
+                <strong>نگار</strong>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="section-title">
+            <p>ارتباط با ما</p>
+            <h2>تماس با مانتو کوک</h2>
+        </div>
+
+        <form id="contactForm" class="contact-form">
+            <input type="text" id="name" placeholder="نام شما" required>
+            <input type="email" id="email" placeholder="ایمیل شما" required>
+            <textarea id="message" rows="5" placeholder="پیام شما" required></textarea>
+            <button class="primary-btn" type="submit">ارسال پیام</button>
+        </form>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container footer-content">
+        <div>
+            <h3>مانتو کوک</h3>
+            <p>زیبایی در سادگی</p>
+        </div>
+
+        <p>© 2026 تمامی حقوق محفوظ است.</p>
+    </div>
+</footer>
+
+<!-- Cart Modal -->
+<div class="modal" id="cartModal">
+    <div class="modal-content">
+        <button class="close-btn" id="closeCart">×</button>
+
+        <h2>🛒 سبد خرید</h2>
+
+        <div id="cartItems"></div>
+
+        <div class="cart-total">
+            مبلغ کل: <strong id="cartTotal">۰ تومان</strong>
+        </div>
+
+        <button class="primary-btn checkout-btn" id="checkoutBtn">
+            ثبت خرید
+        </button>
+    </div>
+</div>
+
+<!-- Checkout Modal -->
+<div class="modal" id="checkoutModal">
+    <div class="modal-content">
+        <button class="close-btn" id="closeCheckout">×</button>
+
+        <h2>ثبت خرید</h2>
+
+        <form id="checkoutForm">
+            <input type="text" placeholder="نام و نام خانوادگی" required>
+            <input type="tel" placeholder="شماره تماس" required>
+            <textarea placeholder="آدرس تحویل" rows="4" required></textarea>
+
+            <button class="primary-btn" type="submit">
+                تأیید و ثبت سفارش
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
